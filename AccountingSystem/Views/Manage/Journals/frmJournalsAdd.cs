@@ -51,6 +51,7 @@ namespace AccountingSystem.Views.Manage.Journals
             return false;
         }
 
+
         private void frmJournalsAdd_Load(object sender, EventArgs e)
         {
             Helper.LoadFormIcon(this);
@@ -64,6 +65,16 @@ namespace AccountingSystem.Views.Manage.Journals
                 _frmJournals.LoadRecords();
                 ucJournals1.ResetForm();
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

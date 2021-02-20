@@ -39,9 +39,10 @@ namespace AccountingSystem.Views.Manage.Journals
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(56, 11);
+            this.txtName.Location = new System.Drawing.Point(49, 8);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(370, 27);
+            this.txtName.Size = new System.Drawing.Size(324, 23);
             this.txtName.TabIndex = 0;
             this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.txtName_Validating);
             this.txtName.Validated += new System.EventHandler(this.txtName_Validated);
@@ -49,9 +50,9 @@ namespace AccountingSystem.Views.Manage.Journals
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 14);
+            this.label1.Location = new System.Drawing.Point(1, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
@@ -62,22 +63,25 @@ namespace AccountingSystem.Views.Manage.Journals
             // chkSpecialJournal
             // 
             this.chkSpecialJournal.AutoSize = true;
-            this.chkSpecialJournal.Location = new System.Drawing.Point(56, 44);
+            this.chkSpecialJournal.Location = new System.Drawing.Point(49, 33);
+            this.chkSpecialJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkSpecialJournal.Name = "chkSpecialJournal";
-            this.chkSpecialJournal.Size = new System.Drawing.Size(183, 24);
+            this.chkSpecialJournal.Size = new System.Drawing.Size(146, 19);
             this.chkSpecialJournal.TabIndex = 2;
             this.chkSpecialJournal.Text = "This is a special journal";
             this.chkSpecialJournal.UseVisualStyleBackColor = true;
             // 
             // ucJournals
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.chkSpecialJournal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtName);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucJournals";
-            this.Size = new System.Drawing.Size(458, 77);
+            this.Size = new System.Drawing.Size(401, 58);
+            this.Load += new System.EventHandler(this.ucJournals_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epName)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

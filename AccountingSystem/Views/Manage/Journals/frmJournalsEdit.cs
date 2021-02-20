@@ -87,5 +87,10 @@ namespace AccountingSystem.Views.Manage.Journals
                 _frmJournals.LoadRecords();
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }
