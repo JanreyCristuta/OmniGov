@@ -17,12 +17,6 @@ namespace ACC.Data
             _dbGenericCommands = dbGenericCommands;
         }
 
-
-        public Dictionary<string, string> GetRecordByID(int Id)
-        {
-            throw new NotImplementedException();
-        }
-
         public DataTable GetRecords()
         {
             try
@@ -31,6 +25,30 @@ namespace ACC.Data
 
                 var dtJournals = new DataTable();
                 return _dbGenericCommands.Fill(query, dtJournals);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public Dictionary<string, string> GetRecordByID(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataTable GetRecordsByAccountGroupId(byte id)
+        {
+            try
+            {
+                var parameters = new object[][]
+                {
+                    new object[] { "@id", DbType.Byte, id},
+                };
+
+                string query = $"SELECT * FROM {tableName} WHERE account_group_id =  @id";
+
+                return _dbGenericCommands.ExecuteReader(query, parameters);
             }
             catch (Exception)
             {
