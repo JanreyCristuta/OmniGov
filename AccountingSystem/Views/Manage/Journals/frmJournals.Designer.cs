@@ -58,6 +58,7 @@ namespace AccountingSystem.Views.Manage.Journals
             this.dgJournals.Name = "dgJournals";
             this.dgJournals.RowHeadersWidth = 51;
             this.dgJournals.RowTemplate.Height = 29;
+            this.dgJournals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgJournals.Size = new System.Drawing.Size(773, 444);
             this.dgJournals.TabIndex = 0;
             this.dgJournals.SelectionChanged += new System.EventHandler(this.dgJournals_SelectionChanged);
