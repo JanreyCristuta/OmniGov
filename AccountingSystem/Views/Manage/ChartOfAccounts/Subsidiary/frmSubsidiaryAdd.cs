@@ -14,6 +14,7 @@ namespace AccountingSystem.Views.Manage.ChartOfAccounts.Subsidiary
     public partial class frmSubsidiaryAdd : Form
     {
         private readonly frmSubsidiary frmSubsidiary;
+
         public frmSubsidiaryAdd(frmSubsidiary _frmSubsidiary, byte fundId, ushort generalLedgerId)
         {
             InitializeComponent();
