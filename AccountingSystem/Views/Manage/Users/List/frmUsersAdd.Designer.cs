@@ -40,18 +40,20 @@ namespace AccountingSystem.Views.Manage.Users.List
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.CausesValidation = false;
             this.flowLayoutPanel1.Controls.Add(this.btnCancel);
             this.flowLayoutPanel1.Controls.Add(this.btnSave);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 286);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 246);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(491, 36);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(512, 36);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(394, 3);
+            this.btnCancel.CausesValidation = false;
+            this.btnCancel.Location = new System.Drawing.Point(415, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCancel.Size = new System.Drawing.Size(94, 29);
@@ -61,9 +63,10 @@ namespace AccountingSystem.Views.Manage.Users.List
             // 
             // btnSave
             // 
+            this.btnSave.CausesValidation = false;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(294, 3);
+            this.btnSave.Location = new System.Drawing.Point(315, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSave.Size = new System.Drawing.Size(94, 29);
@@ -76,20 +79,21 @@ namespace AccountingSystem.Views.Manage.Users.List
             // 
             this.ucUsers1.Location = new System.Drawing.Point(0, 5);
             this.ucUsers1.Name = "ucUsers1";
-            this.ucUsers1.Size = new System.Drawing.Size(488, 278);
+            this.ucUsers1.Size = new System.Drawing.Size(509, 235);
             this.ucUsers1.TabIndex = 4;
-            
             // 
             // frmUsersAdd
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(491, 322);
+            this.ClientSize = new System.Drawing.Size(512, 282);
             this.Controls.Add(this.ucUsers1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MinimumSize = new System.Drawing.Size(530, 329);
             this.Name = "frmUsersAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add User";

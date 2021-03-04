@@ -62,7 +62,9 @@ namespace ACC.Data
                 throw;
             }
         }
-        
+
+    
+
         public DataTable GetRecordsBySearch(string searchText)
         {
             try
@@ -182,6 +184,7 @@ namespace ACC.Data
 
             return false;
         }
+
 
         public bool NameExist(string roleName)
         {
