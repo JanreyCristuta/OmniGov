@@ -39,9 +39,9 @@ namespace AccountingSystem.Views.Manage.Funds
             // 
             // ucFunds1
             // 
-            this.ucFunds1.Location = new System.Drawing.Point(8, 6);
+            this.ucFunds1.Location = new System.Drawing.Point(8, -3);
             this.ucFunds1.Name = "ucFunds1";
-            this.ucFunds1.Size = new System.Drawing.Size(401, 58);
+            this.ucFunds1.Size = new System.Drawing.Size(401, 69);
             this.ucFunds1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -94,6 +94,8 @@ namespace AccountingSystem.Views.Manage.Funds
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.ucFunds1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(431, 135);
+            this.MinimumSize = new System.Drawing.Size(431, 135);
             this.Name = "frmFundAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Fund";
