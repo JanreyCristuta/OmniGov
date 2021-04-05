@@ -91,7 +91,7 @@ namespace AccountingSystem.Views.Manage.BeginningBalances
             this.MinimizeBox = false;
             this.Name = "frmBeginningBalanceAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Beginning Balance";
+            this.Text = "Set Beginning Balance";
             this.Load += new System.EventHandler(this.frmBeginningBalanceAdd_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
