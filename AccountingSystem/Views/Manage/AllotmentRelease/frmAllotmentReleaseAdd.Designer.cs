@@ -43,39 +43,37 @@ namespace AccountingSystem.Views.Manage.AllotmentRelease
             this.flowLayoutPanel1.Controls.Add(this.btnSave);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 137);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 168);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(439, 30);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(522, 29);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(361, 3);
+            this.btnCancel.Location = new System.Drawing.Point(444, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.Image = global::AccountingSystem.Properties.Resources.save14px;
-            this.btnSave.Location = new System.Drawing.Point(280, 3);
+            this.btnSave.Location = new System.Drawing.Point(363, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Add to list";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // ucAllotmentRelease1
             // 
-            this.ucAllotmentRelease1.Location = new System.Drawing.Point(20, 12);
+            this.ucAllotmentRelease1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucAllotmentRelease1.Location = new System.Drawing.Point(12, 12);
             this.ucAllotmentRelease1.Name = "ucAllotmentRelease1";
-            this.ucAllotmentRelease1.Size = new System.Drawing.Size(416, 119);
-            this.ucAllotmentRelease1.TabIndex = 0;
+            this.ucAllotmentRelease1.Size = new System.Drawing.Size(507, 145);
+            this.ucAllotmentRelease1.TabIndex = 2;
             // 
             // frmAllotmentReleaseAdd
             // 
@@ -84,7 +82,7 @@ namespace AccountingSystem.Views.Manage.AllotmentRelease
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(439, 167);
+            this.ClientSize = new System.Drawing.Size(522, 197);
             this.Controls.Add(this.ucAllotmentRelease1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -94,16 +92,16 @@ namespace AccountingSystem.Views.Manage.AllotmentRelease
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Allotment Release";
+            this.Load += new System.EventHandler(this.frmAllotmentReleaseAdd_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSave;
+        internal System.Windows.Forms.Button btnCancel;
+        internal System.Windows.Forms.Button btnSave;
         internal ucAllotmentRelease ucAllotmentRelease1;
     }
 }
