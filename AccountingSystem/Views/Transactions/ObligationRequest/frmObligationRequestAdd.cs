@@ -14,12 +14,14 @@ namespace AccountingSystem.Views.Transactions.ObligationRequest
     public partial class frmObligationRequestAdd : Form
     {
         private ucObligationRequest uc;
+        private frmObligationRequestMain _frmObligationRequestMain;
 
-        public frmObligationRequestAdd()
+        public frmObligationRequestAdd(frmObligationRequestMain frmObligationRequestMain)
         {
             InitializeComponent();
             Helper.LoadFormIcon(this);
             uc = ucObligationRequest1;
+            _frmObligationRequestMain = frmObligationRequestMain;
         }
 
         private bool SaveData()
@@ -67,6 +69,7 @@ namespace AccountingSystem.Views.Transactions.ObligationRequest
             {
                 uc.ResetForm();
                 Helper.MessageBoxSuccess("Obligation Request has been saved.");
+                _frmObligationRequestMain.ucObligationRequestMain1.LoadObligationRequestRecords();
             }
         }
     }
