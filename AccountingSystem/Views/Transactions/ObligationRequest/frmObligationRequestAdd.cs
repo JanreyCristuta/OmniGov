@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACC.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,45 +13,48 @@ namespace AccountingSystem.Views.Transactions.ObligationRequest
 {
     public partial class frmObligationRequestAdd : Form
     {
-        private ucObligationRequestMain _ucObligationRequestMain;
-        private ucObligationRequest _ucObligationRequest;
+        private ucObligationRequest uc;
+        private frmObligationRequestMain _frmObligationRequestMain;
 
-        public frmObligationRequestAdd(ucObligationRequestMain ucObligationRequestMain)
+        public frmObligationRequestAdd(frmObligationRequestMain frmObligationRequestMain)
         {
             InitializeComponent();
             Helper.LoadFormIcon(this);
-            _ucObligationRequest = ucObligationRequest1;
-            _ucObligationRequestMain = ucObligationRequestMain;
-            _ucObligationRequest.LoadReference(_ucObligationRequestMain);
+            uc = ucObligationRequest1;
+            _frmObligationRequestMain = frmObligationRequestMain;
         }
 
-        private bool AddToList() 
+        private bool SaveData()
         {
             try
             {
-                if (!_ucObligationRequest.ValidateChildren()) 
+                if (!uc.ValidateChildren())
                 {
-                    Helper.MessageBoxError(_ucObligationRequest.GetFormErrors());
+                    Helper.MessageBoxError(uc.GetFormErrors());
                     return false;
                 }
 
-                ushort accountId = Convert.ToUInt16(_ucObligationRequest.cmbxAccount.SelectedValue);
-                string accountName = _ucObligationRequest.cmbxAccount.Text;
-                string accountCode = Factory.GeneralLedgerAccountsRepository().GetViewRecordByID(accountId)["account_code"];
-                decimal amount = _ucObligationRequest.nudAmount.Value;
+                string obligationNo = $"{uc.mskTxtSeriesNo.Text}-{uc.GenerateObligationNoTemplate()}";
+                int userId =  Helper.UserId;
 
-
-                var data = new object[]
+                var obligationRequestModel = new ObligationRequestModel()
                 {
-                    accountId,
-                    accountName,
-                    accountCode,
-                    amount
+                    FundID = uc.fundId,
+                    FPPId = uc.fppId,
+                    OtherFPPId = uc.otherFPPId,
+                    AllotmentClassesID = uc.allotmentClassId,
+                    GenLedgerAccID = uc.accountId,
+                    DateRequested = uc.dtDateRequest.Value,
+                    ObligationNo = obligationNo,
+                    Payee = uc.txtPayee.Text.Trim(),
+                    Explanation = uc.txtExplanation.Text.Trim(),
+                    ReferencesNo = uc.txtReferenceNo.Text.Trim(),
+                    ObligationAmount = uc.nudAmount.Value,
+                    CreatedBy = userId
                 };
 
-                _ucObligationRequestMain.dgObligationRequests.Rows.Add(data);
 
-                return true;
+                return Factory.ObligationRequestRepository().Insert(obligationRequestModel);
             }
             catch (Exception ex)
             {
@@ -59,23 +63,13 @@ namespace AccountingSystem.Views.Transactions.ObligationRequest
             return false;
         }
 
-        private void DisableComponents()
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            _ucObligationRequestMain.panel1.Enabled = false;
-            _ucObligationRequestMain.dtDateRequested.Enabled = false;
-        }
-
-        private void frmObligationRequestAdd_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddToList_Click(object sender, EventArgs e)
-        {
-            if (AddToList()) 
+            if (SaveData()) 
             {
-                DisableComponents();
-                Close();
+                uc.ResetForm();
+                Helper.MessageBoxSuccess("Obligation Request has been saved.");
+                _frmObligationRequestMain.ucObligationRequestMain1.LoadObligationRequestRecords();
             }
         }
     }
