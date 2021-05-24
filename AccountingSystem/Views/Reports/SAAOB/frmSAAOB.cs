@@ -51,7 +51,7 @@ namespace AccountingSystem.Views.Reports.SAAOB
             DateTime date = dtAsOf.Value;
             short year = Convert.ToInt16(dtAsOf.Value.Year);
 
-            var dtBudgetAppropriations = Factory.BudgetAppropriationsRepository().GetViewRecordsByFundIdDateYear(fundId, date, year);
+            var dtBudgetAppropriations = Factory.BudgetAppropriationsRepository().GetViewRecordsByFundIdDateCurrentYear(fundId, date, year);
 
 
             foreach (DataRow item in dtBudgetAppropriations.Rows)
