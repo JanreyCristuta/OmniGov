@@ -12,20 +12,20 @@ namespace AccountingSystem.Views.Manage.AllotmentRelease
 {
     public partial class frmAllotmentReleaseAdd : Form
     {
-        internal ucAllotmentReleaseMain ucAllotmentReleaseMain;
+        internal ucAllotmentReleaseMain _ucAllotmentReleaseMain;
         private ucAllotmentRelease uc;
 
         public frmAllotmentReleaseAdd(ucAllotmentReleaseMain ucAllotmentReleaseMain)
         {
             InitializeComponent();
-            this.ucAllotmentReleaseMain = ucAllotmentReleaseMain;
+            this._ucAllotmentReleaseMain = ucAllotmentReleaseMain;
             uc = ucAllotmentRelease1;
             Helper.LoadFormIcon(this);
         }
 
         private void frmAllotmentReleaseAdd_Load(object sender, EventArgs e)
         {
-            uc.LoadReference(ucAllotmentReleaseMain);
+            uc.LoadReference(_ucAllotmentReleaseMain);
         }
 
         private bool AddAllotmentRelease()
@@ -49,13 +49,14 @@ namespace AccountingSystem.Views.Manage.AllotmentRelease
 
                 var items = new object[]
                 {
+                    year,
                     budgetAppropriationId,
                     accountName,
                     accountCode,
                     amount
                 };
 
-                ucAllotmentReleaseMain.dgAllotmentRelease.Rows.Add(items);
+                _ucAllotmentReleaseMain.dgAllotmentRelease.Rows.Add(items);
 
                 return true;
             }
@@ -70,8 +71,8 @@ namespace AccountingSystem.Views.Manage.AllotmentRelease
         {
             if (AddAllotmentRelease())
             {
-                ucAllotmentReleaseMain.panel1.Enabled = false;
-                ucAllotmentReleaseMain.dtDateIssued.Enabled = false;
+                _ucAllotmentReleaseMain.panel1.Enabled = false;
+                _ucAllotmentReleaseMain.dtDateIssued.Enabled = false;
                 uc.ResetForm();
             }
         }
