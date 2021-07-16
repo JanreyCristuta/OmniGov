@@ -39,15 +39,15 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             this.lblRecordCounts = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblDateEntryPlaceHolder = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblDateEntry = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCreatedAtPlaceHolder = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblCreatedAt = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUpdatedAtPlaceHolder = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblUpdatedAt = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtTotalSupplementalAppropriations = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblUpdatedAt = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblCreatedAt = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblDateEntry = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -63,7 +63,7 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             this.btnDelete});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(702, 50);
+            this.toolStrip1.Size = new System.Drawing.Size(818, 50);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -109,7 +109,7 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             this.dataGridView1.Location = new System.Drawing.Point(12, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(678, 285);
+            this.dataGridView1.Size = new System.Drawing.Size(794, 326);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -127,9 +127,9 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             this.toolStripStatusLabel2,
             this.lblUpdatedAtPlaceHolder,
             this.lblUpdatedAt});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 374);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 415);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(702, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(818, 22);
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -148,7 +148,7 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(409, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(525, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // lblDateEntryPlaceHolder
@@ -156,6 +156,11 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             this.lblDateEntryPlaceHolder.Name = "lblDateEntryPlaceHolder";
             this.lblDateEntryPlaceHolder.Size = new System.Drawing.Size(64, 17);
             this.lblDateEntryPlaceHolder.Text = "Date Entry:";
+            // 
+            // lblDateEntry
+            // 
+            this.lblDateEntry.Name = "lblDateEntry";
+            this.lblDateEntry.Size = new System.Drawing.Size(0, 17);
             // 
             // toolStripStatusLabel3
             // 
@@ -171,6 +176,11 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             this.lblCreatedAtPlaceHolder.Size = new System.Drawing.Size(64, 17);
             this.lblCreatedAtPlaceHolder.Text = "Created at:";
             // 
+            // lblCreatedAt
+            // 
+            this.lblCreatedAt.Name = "lblCreatedAt";
+            this.lblCreatedAt.Size = new System.Drawing.Size(0, 17);
+            // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -185,10 +195,15 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             this.lblUpdatedAtPlaceHolder.Size = new System.Drawing.Size(68, 17);
             this.lblUpdatedAtPlaceHolder.Text = "Updated at:";
             // 
+            // lblUpdatedAt
+            // 
+            this.lblUpdatedAt.Name = "lblUpdatedAt";
+            this.lblUpdatedAt.Size = new System.Drawing.Size(0, 17);
+            // 
             // txtTotalSupplementalAppropriations
             // 
             this.txtTotalSupplementalAppropriations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalSupplementalAppropriations.Location = new System.Drawing.Point(532, 344);
+            this.txtTotalSupplementalAppropriations.Location = new System.Drawing.Point(648, 385);
             this.txtTotalSupplementalAppropriations.Name = "txtTotalSupplementalAppropriations";
             this.txtTotalSupplementalAppropriations.ReadOnly = true;
             this.txtTotalSupplementalAppropriations.Size = new System.Drawing.Size(158, 23);
@@ -199,40 +214,25 @@ namespace AccountingSystem.Views.Manage.SupplementalAppropriations
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 347);
+            this.label1.Location = new System.Drawing.Point(453, 388);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "Total Supplemented Appropriation";
-            // 
-            // lblUpdatedAt
-            // 
-            this.lblUpdatedAt.Name = "lblUpdatedAt";
-            this.lblUpdatedAt.Size = new System.Drawing.Size(0, 17);
-            // 
-            // lblCreatedAt
-            // 
-            this.lblCreatedAt.Name = "lblCreatedAt";
-            this.lblCreatedAt.Size = new System.Drawing.Size(0, 17);
-            // 
-            // lblDateEntry
-            // 
-            this.lblDateEntry.Name = "lblDateEntry";
-            this.lblDateEntry.Size = new System.Drawing.Size(0, 17);
             // 
             // frmSupplementalAppropriations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(702, 396);
+            this.ClientSize = new System.Drawing.Size(818, 437);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTotalSupplementalAppropriations);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGridView1);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(718, 435);
+            this.MinimumSize = new System.Drawing.Size(834, 476);
             this.Name = "frmSupplementalAppropriations";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
