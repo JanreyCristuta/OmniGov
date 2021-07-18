@@ -72,7 +72,6 @@ namespace AccountingSystem.Views.Reports.TrialBalance
             // 
             // btnRetrieve
             // 
-            this.btnRetrieve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRetrieve.Location = new System.Drawing.Point(555, 11);
             this.btnRetrieve.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.btnRetrieve.Name = "btnRetrieve";
@@ -109,7 +108,7 @@ namespace AccountingSystem.Views.Reports.TrialBalance
             this.panelReport.Size = new System.Drawing.Size(915, 638);
             this.panelReport.TabIndex = 3;
             // 
-            // frmTrialBalance
+            // frmPreClosingTrialBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,7 +116,7 @@ namespace AccountingSystem.Views.Reports.TrialBalance
             this.Controls.Add(this.panelReport);
             this.Controls.Add(this.panel1);
             this.MinimizeBox = false;
-            this.Name = "frmTrialBalance";
+            this.Name = "frmPreClosingTrialBalance";
             this.Text = "Pre Closing Trial Balance";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTrialBalance_Load);
