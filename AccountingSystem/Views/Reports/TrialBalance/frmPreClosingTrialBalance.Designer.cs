@@ -58,12 +58,14 @@ namespace AccountingSystem.Views.Reports.TrialBalance
             // cbHideZeroBalance
             // 
             this.cbHideZeroBalance.AutoSize = true;
+            this.cbHideZeroBalance.Enabled = false;
             this.cbHideZeroBalance.Location = new System.Drawing.Point(569, 14);
             this.cbHideZeroBalance.Name = "cbHideZeroBalance";
             this.cbHideZeroBalance.Size = new System.Drawing.Size(127, 19);
             this.cbHideZeroBalance.TabIndex = 9;
             this.cbHideZeroBalance.Text = "Hide Zero Balances";
             this.cbHideZeroBalance.UseVisualStyleBackColor = true;
+            this.cbHideZeroBalance.CheckedChanged += new System.EventHandler(this.cbHideZeroBalance_CheckedChanged);
             // 
             // dtAsOf
             // 
@@ -131,7 +133,6 @@ namespace AccountingSystem.Views.Reports.TrialBalance
             this.MinimizeBox = false;
             this.Name = "frmPreClosingTrialBalance";
             this.ShowInTaskbar = false;
-            this.Text = "Pre Closing Trial Balance";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTrialBalance_Load);
             this.panel1.ResumeLayout(false);
