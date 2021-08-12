@@ -181,22 +181,22 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.22058in</Width>
+                  <Width>1.3803in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.86807in</Width>
+                  <Width>2.02779in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.46172in</Width>
+                  <Width>0.62144in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.44445in</Width>
+                  <Width>1.60417in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.13542in</Width>
+                  <Width>0.29514in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.60938in</Width>
+                  <Width>1.7691in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -2553,9 +2553,8 @@
             </TablixRowHierarchy>
             <DataSetName>dtStatementOfFinancialPosition</DataSetName>
             <Top>0.905in</Top>
-            <Left>0.5in</Left>
             <Height>2.21876in</Height>
-            <Width>6.73962in</Width>
+            <Width>7.69795in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
