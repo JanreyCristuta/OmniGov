@@ -225,5 +225,6 @@ namespace AccountingSystem.Views.Reports.TrialBalance
             else
                 RecordsFilter(reportViewer.LocalReport, 0);
         }
+
     }
 }
