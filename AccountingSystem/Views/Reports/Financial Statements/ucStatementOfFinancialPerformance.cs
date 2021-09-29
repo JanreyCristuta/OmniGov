@@ -36,9 +36,6 @@ namespace AccountingSystem.Views.Reports.Financial_Statements
 
                     var items = new object[]
                     {
-                    null,
-                    null,
-                    null,
                     row["account_group_id"],
                     row["account_group_code"],
                     row["account_group_name"],
@@ -51,7 +48,6 @@ namespace AccountingSystem.Views.Reports.Financial_Statements
                     row["general_ledger_accounts_id"],
                     row["account_code"],
                     row["general_ledger_accounts_name"],
-                    null,
                     currentAmount,
                     Factory.JEVAccountsRepository().GetBalanceByFundAndAccountAndDateEntry(fundId, Convert.ToInt32(row["general_ledger_accounts_id"]), previousYearEnded)
                 };
