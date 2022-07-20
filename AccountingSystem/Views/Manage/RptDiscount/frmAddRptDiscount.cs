@@ -12,9 +12,11 @@ namespace AccountingSystem.Views.Manage.RptDiscount
 {
     public partial class frmAddRptDiscount : Form
     {
-        public frmAddRptDiscount()
+        private readonly frmRptDiscounts _frmRptDiscounts;
+        public frmAddRptDiscount(frmRptDiscounts frmRptDiscounts)
         {
             InitializeComponent();
+            _frmRptDiscounts = frmRptDiscounts;
             Helper.LoadFormIcon(this);
         }
 
