@@ -14,6 +14,7 @@ namespace AccountingSystem.Views.Manage.RealProperties
     {
         public frmAddRealProperties()
         {
+            Helper.LoadFormIcon(this);
             InitializeComponent();
         }
     }
