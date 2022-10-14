@@ -41,7 +41,7 @@
             this.ucRealProperties1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucRealProperties1.Location = new System.Drawing.Point(0, 0);
             this.ucRealProperties1.Name = "ucRealProperties1";
-            this.ucRealProperties1.Size = new System.Drawing.Size(719, 464);
+            this.ucRealProperties1.Size = new System.Drawing.Size(715, 463);
             this.ucRealProperties1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -51,14 +51,14 @@
             this.flowLayoutPanel1.Controls.Add(this.btnSave);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 435);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 434);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(719, 29);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(715, 29);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(641, 3);
+            this.btnCancel.Location = new System.Drawing.Point(637, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(560, 3);
+            this.btnSave.Location = new System.Drawing.Point(556, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
@@ -81,12 +81,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(719, 464);
+            this.ClientSize = new System.Drawing.Size(715, 463);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.ucRealProperties1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MinimizeBox = false;
             this.Name = "frmEditRealProperties";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Real Properties";
