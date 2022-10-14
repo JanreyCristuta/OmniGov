@@ -29,21 +29,12 @@ namespace AccountingSystem.Views.Manage.TaxPayers
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucvRealProperties1 = new AccountingSystem.Views.Manage.TaxPayers.ucRealProperties();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.ucTaxPayers1 = new AccountingSystem.Views.Manage.TaxPayers.ucTaxPayers();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ucvRealProperties1
-            // 
-            this.ucvRealProperties1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucvRealProperties1.Location = new System.Drawing.Point(0, 0);
-            this.ucvRealProperties1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucvRealProperties1.Name = "ucvRealProperties1";
-            this.ucvRealProperties1.Size = new System.Drawing.Size(719, 464);
-            this.ucvRealProperties1.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
@@ -52,14 +43,14 @@ namespace AccountingSystem.Views.Manage.TaxPayers
             this.flowLayoutPanel1.Controls.Add(this.btnSave);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 435);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 174);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(719, 29);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(353, 29);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(641, 3);
+            this.btnCancel.Location = new System.Drawing.Point(275, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 0;
@@ -68,13 +59,21 @@ namespace AccountingSystem.Views.Manage.TaxPayers
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(560, 3);
+            this.btnSave.Location = new System.Drawing.Point(194, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Add";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // ucTaxPayers1
+            // 
+            this.ucTaxPayers1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ucTaxPayers1.Location = new System.Drawing.Point(0, 12);
+            this.ucTaxPayers1.Name = "ucTaxPayers1";
+            this.ucTaxPayers1.Size = new System.Drawing.Size(354, 157);
+            this.ucTaxPayers1.TabIndex = 3;
             // 
             // frmAddRealProperties
             // 
@@ -82,9 +81,9 @@ namespace AccountingSystem.Views.Manage.TaxPayers
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(719, 464);
+            this.ClientSize = new System.Drawing.Size(353, 203);
+            this.Controls.Add(this.ucTaxPayers1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.ucvRealProperties1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -104,5 +103,6 @@ namespace AccountingSystem.Views.Manage.TaxPayers
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
+        private ucTaxPayers ucTaxPayers1;
     }
 }
