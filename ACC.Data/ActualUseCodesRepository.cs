@@ -81,7 +81,7 @@ namespace ACC.Data
                 new object[] { "@search_text", DbType.String, $"%{searchText}%"}
             };
 
-            string query = $"SELECT * FROM {tableName} WHERE code = @search_text OR name = @search_text";
+            string query = $"SELECT * FROM {tableName} WHERE code LIKE @search_text OR name LIKE @search_text";
             var dataTable = new DataTable();
             return _mySqlGenericCommandsLFS.FillBySearch(query, dataTable, parameters);
         }
