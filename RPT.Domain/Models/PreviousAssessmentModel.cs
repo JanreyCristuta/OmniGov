@@ -12,6 +12,6 @@ namespace RPT.Domain.Models
         public string PreviousOwner { get; set; }
         public string EffectivityAssessment { get; set; }
         public string RecordingPerson { get; set; }
-        public DateTime RecordingDate { get; set; }
+        public DateTime DateRecorded { get; set; }
     }
 }
