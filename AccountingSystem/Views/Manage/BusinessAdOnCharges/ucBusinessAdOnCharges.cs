@@ -16,5 +16,13 @@ namespace AccountingSystem.Views.Manage.BusinessAdOnCharges
         {
             InitializeComponent();
         }
+
+        private void ucBusinessAdOnCharges_Load(object sender, EventArgs e)
+        {
+            if (!DesignMode)
+            {
+
+            }
+        }
     }
 }
