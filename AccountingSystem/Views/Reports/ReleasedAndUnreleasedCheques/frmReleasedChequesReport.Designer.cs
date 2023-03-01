@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(991, 562);
             this.Controls.Add(this.panel1);
             this.Name = "frmReleasedChequesReport";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports > Released Cheques";
             this.ResumeLayout(false);
