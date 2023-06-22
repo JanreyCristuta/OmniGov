@@ -72,7 +72,7 @@ namespace ACC.Data
                 new object[] { "@amount", DbType.Decimal, entity.Amount}
             };
 
-            string query = $"";
+            string query = $"INSERT INTO {tableName}(budget_appropriations_id, amount) VALUES  (@budget_appropriations_id, @amount)";
             return mySqlGenericCommandsLFS.ExecuteNonQuery(query, parameters);
         }
 
