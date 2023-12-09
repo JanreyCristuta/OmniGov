@@ -46,12 +46,12 @@
             flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             flowLayoutPanel1.Location = new System.Drawing.Point(0, 417);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new System.Drawing.Size(422, 30);
+            flowLayoutPanel1.Size = new System.Drawing.Size(378, 30);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new System.Drawing.Point(344, 3);
+            btnCancel.Location = new System.Drawing.Point(300, 3);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new System.Drawing.Size(75, 23);
             btnCancel.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new System.Drawing.Point(263, 3);
+            btnAdd.Location = new System.Drawing.Point(219, 3);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new System.Drawing.Size(75, 23);
             btnAdd.TabIndex = 0;
@@ -74,7 +74,7 @@
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Padding = new System.Windows.Forms.Padding(4);
-            panel1.Size = new System.Drawing.Size(422, 417);
+            panel1.Size = new System.Drawing.Size(378, 417);
             panel1.TabIndex = 1;
             // 
             // ucRegistry1
@@ -82,14 +82,16 @@
             ucRegistry1.Dock = System.Windows.Forms.DockStyle.Fill;
             ucRegistry1.Location = new System.Drawing.Point(4, 4);
             ucRegistry1.Name = "ucRegistry1";
-            ucRegistry1.Size = new System.Drawing.Size(414, 409);
+            ucRegistry1.Size = new System.Drawing.Size(370, 409);
             ucRegistry1.TabIndex = 0;
             // 
             // frmAddRegistry
             // 
+            AcceptButton = btnAdd;
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            CancelButton = btnCancel;
             ClientSize = new System.Drawing.Size(378, 447);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel1);
