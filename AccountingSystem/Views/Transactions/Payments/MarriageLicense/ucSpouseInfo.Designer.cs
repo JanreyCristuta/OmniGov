@@ -74,6 +74,7 @@
             cmbxRegistry.Name = "cmbxRegistry";
             cmbxRegistry.Size = new System.Drawing.Size(243, 23);
             cmbxRegistry.TabIndex = 0;
+            cmbxRegistry.SelectedValueChanged += cmbxRegistry_SelectedValueChanged;
             cmbxRegistry.KeyPress += cmbxRegistry_KeyPress;
             cmbxRegistry.Validating += cmbxRegistry_Validating;
             cmbxRegistry.Validated += cmbxRegistry_Validated;
@@ -98,7 +99,7 @@
             txtCountry.PlaceholderText = "Country";
             txtCountry.ReadOnly = true;
             txtCountry.Size = new System.Drawing.Size(243, 23);
-            txtCountry.TabIndex = 35;
+            txtCountry.TabIndex = 11;
             // 
             // dtBirthDate
             // 
@@ -109,7 +110,7 @@
             dtBirthDate.Location = new System.Drawing.Point(121, 177);
             dtBirthDate.Name = "dtBirthDate";
             dtBirthDate.Size = new System.Drawing.Size(243, 23);
-            dtBirthDate.TabIndex = 28;
+            dtBirthDate.TabIndex = 8;
             // 
             // label7
             // 
@@ -131,7 +132,7 @@
             txtProvince.PlaceholderText = "Province";
             txtProvince.ReadOnly = true;
             txtProvince.Size = new System.Drawing.Size(243, 23);
-            txtProvince.TabIndex = 32;
+            txtProvince.TabIndex = 10;
             // 
             // txtFirstName
             // 
@@ -142,7 +143,7 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.ReadOnly = true;
             txtFirstName.Size = new System.Drawing.Size(243, 23);
-            txtFirstName.TabIndex = 21;
+            txtFirstName.TabIndex = 1;
             // 
             // flowPanelSex
             // 
@@ -153,7 +154,7 @@
             flowPanelSex.Location = new System.Drawing.Point(121, 119);
             flowPanelSex.Name = "flowPanelSex";
             flowPanelSex.Size = new System.Drawing.Size(243, 23);
-            flowPanelSex.TabIndex = 38;
+            flowPanelSex.TabIndex = 4;
             // 
             // radMale
             // 
@@ -162,7 +163,7 @@
             radMale.Location = new System.Drawing.Point(3, 3);
             radMale.Name = "radMale";
             radMale.Size = new System.Drawing.Size(51, 19);
-            radMale.TabIndex = 4;
+            radMale.TabIndex = 5;
             radMale.TabStop = true;
             radMale.Text = "Male";
             radMale.UseVisualStyleBackColor = true;
@@ -173,7 +174,7 @@
             radFemale.Location = new System.Drawing.Point(60, 3);
             radFemale.Name = "radFemale";
             radFemale.Size = new System.Drawing.Size(63, 19);
-            radFemale.TabIndex = 5;
+            radFemale.TabIndex = 6;
             radFemale.Text = "Female";
             radFemale.UseVisualStyleBackColor = true;
             // 
@@ -188,7 +189,7 @@
             txtMunicipality.PlaceholderText = "City";
             txtMunicipality.ReadOnly = true;
             txtMunicipality.Size = new System.Drawing.Size(243, 23);
-            txtMunicipality.TabIndex = 30;
+            txtMunicipality.TabIndex = 9;
             // 
             // label8
             // 
@@ -208,7 +209,7 @@
             txtMiddleName.Name = "txtMiddleName";
             txtMiddleName.ReadOnly = true;
             txtMiddleName.Size = new System.Drawing.Size(243, 23);
-            txtMiddleName.TabIndex = 22;
+            txtMiddleName.TabIndex = 2;
             // 
             // label9
             // 
@@ -272,7 +273,7 @@
             txtContactInfo.Name = "txtContactInfo";
             txtContactInfo.ReadOnly = true;
             txtContactInfo.Size = new System.Drawing.Size(243, 23);
-            txtContactInfo.TabIndex = 37;
+            txtContactInfo.TabIndex = 12;
             // 
             // txtNationality
             // 
@@ -283,7 +284,7 @@
             txtNationality.Name = "txtNationality";
             txtNationality.ReadOnly = true;
             txtNationality.Size = new System.Drawing.Size(243, 23);
-            txtNationality.TabIndex = 26;
+            txtNationality.TabIndex = 7;
             // 
             // txtLastName
             // 
@@ -294,7 +295,7 @@
             txtLastName.Name = "txtLastName";
             txtLastName.ReadOnly = true;
             txtLastName.Size = new System.Drawing.Size(243, 23);
-            txtLastName.TabIndex = 23;
+            txtLastName.TabIndex = 3;
             // 
             // label2
             // 
@@ -311,7 +312,7 @@
             txtCurrenResidence.Location = new System.Drawing.Point(121, 409);
             txtCurrenResidence.Name = "txtCurrenResidence";
             txtCurrenResidence.Size = new System.Drawing.Size(243, 23);
-            txtCurrenResidence.TabIndex = 39;
+            txtCurrenResidence.TabIndex = 16;
             txtCurrenResidence.Validating += txtCurrenResidence_Validating;
             txtCurrenResidence.Validated += txtCurrenResidence_Validated;
             // 
@@ -330,7 +331,7 @@
             txtReligion.Location = new System.Drawing.Point(121, 380);
             txtReligion.Name = "txtReligion";
             txtReligion.Size = new System.Drawing.Size(243, 23);
-            txtReligion.TabIndex = 39;
+            txtReligion.TabIndex = 15;
             txtReligion.Validating += txtReligion_Validating;
             txtReligion.Validated += txtReligion_Validated;
             // 
@@ -340,7 +341,7 @@
             nudAge.Location = new System.Drawing.Point(121, 322);
             nudAge.Name = "nudAge";
             nudAge.Size = new System.Drawing.Size(243, 23);
-            nudAge.TabIndex = 40;
+            nudAge.TabIndex = 13;
             nudAge.Validating += nudAge_Validating;
             nudAge.Validated += nudAge_Validated;
             // 
@@ -348,9 +349,11 @@
             // 
             nudMonths.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             nudMonths.Location = new System.Drawing.Point(121, 351);
+            nudMonths.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
             nudMonths.Name = "nudMonths";
             nudMonths.Size = new System.Drawing.Size(243, 23);
-            nudMonths.TabIndex = 40;
+            nudMonths.TabIndex = 14;
+            nudMonths.Value = new decimal(new int[] { 1, 0, 0, 0 });
             nudMonths.Validating += nudMonths_Validating;
             nudMonths.Validated += nudMonths_Validated;
             // 
@@ -374,6 +377,7 @@
             // 
             // errorProvider1
             // 
+            errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             errorProvider1.ContainerControl = this;
             // 
             // ucSpouseInfo
