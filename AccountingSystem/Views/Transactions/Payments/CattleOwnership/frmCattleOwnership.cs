@@ -16,7 +16,7 @@ namespace AccountingSystem.Views.Transactions.Payments.CattleOwnership
             InitializeComponent();
             Helper.LoadFormIcon(this);
             ucPayment = ucPayment1;
-            this.ucPaymentFeesCharges = ucPaymentFeesCharges1;
+            ucPaymentFeesCharges = ucPaymentFeesCharges1;
             ucCattleOwnership = ucCattleOwnership1;
         }
 
@@ -25,6 +25,7 @@ namespace AccountingSystem.Views.Transactions.Payments.CattleOwnership
             ucPayment.ResetForm();
             ucPaymentFeesCharges.ResetForm();
             ucCattleOwnership.ResetForm();
+            tabControlMain.SelectedIndex = 0;
         }
 
         private void OnLoad()
