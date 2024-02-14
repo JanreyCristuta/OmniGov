@@ -45,7 +45,7 @@
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new System.Windows.Forms.Padding(4);
-            toolStrip1.Size = new System.Drawing.Size(653, 35);
+            toolStrip1.Size = new System.Drawing.Size(534, 35);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -65,14 +65,14 @@
             panel1.Location = new System.Drawing.Point(0, 35);
             panel1.Name = "panel1";
             panel1.Padding = new System.Windows.Forms.Padding(4);
-            panel1.Size = new System.Drawing.Size(653, 620);
+            panel1.Size = new System.Drawing.Size(534, 554);
             panel1.TabIndex = 4;
             // 
             // statusStrip1
             // 
-            statusStrip1.Location = new System.Drawing.Point(0, 655);
+            statusStrip1.Location = new System.Drawing.Point(0, 589);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new System.Drawing.Size(653, 22);
+            statusStrip1.Size = new System.Drawing.Size(534, 22);
             statusStrip1.TabIndex = 5;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -89,7 +89,7 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            ClientSize = new System.Drawing.Size(653, 677);
+            ClientSize = new System.Drawing.Size(534, 611);
             Controls.Add(panel1);
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);
