@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dtLtom17">
+    <DataSet Name="dtLtom17_19">
       <Query>
         <DataSourceName>dsTreasury</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -45,7 +45,7 @@
       <rd:DataSetInfo>
         <rd:DataSetName>dsTreasury</rd:DataSetName>
         <rd:SchemaPath>C:\Users\janre\Source\Repos\Hyubane25\LocalFinanceSystem\AccountingSystem\DataSets\dsTreasury.xsd</rd:SchemaPath>
-        <rd:TableName>dtLtom17</rd:TableName>
+        <rd:TableName>dtLtom17_19</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -1530,7 +1530,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>dtLtom17</DataSetName>
+            <DataSetName>dtLtom17_19</DataSetName>
             <Top>3.52086in</Top>
             <Left>0.01525in</Left>
             <Height>0.78125in</Height>
