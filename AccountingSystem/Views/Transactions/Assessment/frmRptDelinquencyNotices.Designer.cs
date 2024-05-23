@@ -228,7 +228,7 @@
             // toolStripStatusLabel2
             // 
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new System.Drawing.Size(474, 17);
+            toolStripStatusLabel2.Size = new System.Drawing.Size(505, 17);
             toolStripStatusLabel2.Spring = true;
             // 
             // toolStripStatusLabel3
@@ -361,11 +361,12 @@
             ClientSize = new System.Drawing.Size(769, 428);
             Controls.Add(tabControl1);
             MinimizeBox = false;
+            MinimumSize = new System.Drawing.Size(785, 467);
             Name = "frmRptDelinquencyNotices";
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Transactions > Delinquency Notices";
+            Text = "Transactions > Assessment > Delinquency Notices";
             Load += frnRptAssessment_Load;
             tabControl1.ResumeLayout(false);
             tabPageMain.ResumeLayout(false);
