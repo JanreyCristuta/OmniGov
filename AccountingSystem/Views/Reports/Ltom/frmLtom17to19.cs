@@ -82,6 +82,7 @@ namespace AccountingSystem.Views.Reports.Ltom
                 cmbxDelinquentNoticeRecord.ValueMember = "delinquent_notice_id";
                 cmbxDelinquentNoticeRecord.DisplayMember = "notice_date";
             }
+            else { cmbxDelinquentNoticeRecord.SelectedIndex = -1; }
         }
 
         private void LoadReport()
@@ -89,7 +90,9 @@ namespace AccountingSystem.Views.Reports.Ltom
             if (!backgroundWorker1.IsBusy)
             {
                 pbReport.Value = 0;
-                int rptDelinquencyNoticeId = Convert.ToInt32(cmbxDelinquentNoticeRecord.SelectedValue);
+                btnRunReport.Enabled = false;
+                btnRunReport.Text = "Generating Report";
+                var rptDelinquencyNoticeId = cmbxDelinquentNoticeRecord.SelectedValue;
                 backgroundWorker1.RunWorkerAsync(rptDelinquencyNoticeId);
             }
         }
@@ -114,8 +117,16 @@ namespace AccountingSystem.Views.Reports.Ltom
         {
             try
             {
-                int rptDelinquencyNoticeId = Convert.ToInt32(e.Argument);
-                var dictDelinquentNotice = AccFactory.DelinquentNoticeRepository().GetViewRecordById(rptDelinquencyNoticeId);
+                var rptDelinquencyNoticeId = e.Argument;
+
+                if (rptDelinquencyNoticeId is null)
+                {
+                    backgroundWorker1.CancelAsync();
+                    e.Cancel = true;
+                    return;
+                }
+
+                var dictDelinquentNotice = AccFactory.DelinquentNoticeRepository().GetViewRecordById(Convert.ToInt32(rptDelinquencyNoticeId));
                 var noticeDate = Convert.ToDateTime(dictDelinquentNotice["notice_date"]);
                 var completeArpNo = dictDelinquentNotice["complete_arp_no"];
 
@@ -173,6 +184,15 @@ namespace AccountingSystem.Views.Reports.Ltom
         {
             try
             {
+                if (e.Cancelled)
+                {
+                    pbReport.Value = 100;
+                    btnRunReport.Text = "Run Report";
+                    btnRunReport.Enabled = true;
+                    reportViewer1.Clear();
+                    return;
+                }
+
                 var result = ((DataTable dataTable, Dictionary<string, string> dictDelinquentNotice))e.Result;
 
                 if (result.dataTable.Rows.Count < 1)
@@ -183,6 +203,7 @@ namespace AccountingSystem.Views.Reports.Ltom
                                      .FirstOrDefault(rb => rb.Checked);
                 string reportPath;
                 var lguDetails = Helper.LGUDetails();
+                var propertyLocation = Helper.GenerateFullAddress(string.Empty, result.dictDelinquentNotice["barangay_name"], result.dictDelinquentNotice["municipalities_name"], result.dictDelinquentNotice["provinces_name"]);
                 var parameters = new ReportParameter[]
                 {
                     new ReportParameter("paramLgu", lguDetails["municipality"]),
@@ -192,9 +213,9 @@ namespace AccountingSystem.Views.Reports.Ltom
                     new ReportParameter("paramSignatoryTitle", string.Empty),
                     new ReportParameter("paramTaxDecNo", result.dictDelinquentNotice["complete_arp_no"]),
                     new ReportParameter("paramTctNo", string.Empty),
-                    new ReportParameter("paramPropertyLocation", string.Empty),
+                    new ReportParameter("paramPropertyLocation", propertyLocation),
                     new ReportParameter("paramPropertyKind", result.dictDelinquentNotice["complete_arp_no"]),
-                    new ReportParameter("paramAssessedValue", "0.00")
+                    new ReportParameter("paramAssessedValue", result.dictDelinquentNotice["assessed_value"])
                 };
 
                 switch (checkedRadioButton.Name)
@@ -227,6 +248,8 @@ namespace AccountingSystem.Views.Reports.Ltom
                 reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
                 reportViewer1.ZoomMode = ZoomMode.FullPage;
                 reportViewer1.Refresh();
+                btnRunReport.Text = "Run Report";
+                btnRunReport.Enabled = true;
             }
             catch (Exception ex) { Helper.MessageBoxError(ex.Message); }
         }
