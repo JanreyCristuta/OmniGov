@@ -169,11 +169,12 @@
             Controls.Add(splitContainer1);
             Controls.Add(statusStrip1);
             MinimizeBox = false;
+            MinimumSize = new System.Drawing.Size(856, 467);
             Name = "frmLtom20";
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Reports > Warrant of Levy";
+            Text = "Reports > Treasury > LTOM Form No. 20 - Warrant of Levy";
             Load += frmLtom20_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
