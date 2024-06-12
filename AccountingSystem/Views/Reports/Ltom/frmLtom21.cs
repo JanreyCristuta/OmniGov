@@ -39,7 +39,7 @@ namespace AccountingSystem.Views.Reports.Ltom
             txtRpt.AutoCompleteCustomSource = autoCom;
         }
 
-        private void frmLtom20_Load(object sender, EventArgs e)
+        private void frmLtom21_Load(object sender, EventArgs e)
         {
             try
             {
