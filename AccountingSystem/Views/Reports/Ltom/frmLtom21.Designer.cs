@@ -200,7 +200,7 @@
             ShowInTaskbar = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Reports > Treasury > LTOM Form No. 21 - Notice of Levy (Local Assessor and Registrar of Deeds)";
-            Load += frmLtom20_Load;
+            Load += frmLtom21_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
